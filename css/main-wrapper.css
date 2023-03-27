@@ -7,9 +7,17 @@
   height: 100vh;
 }
 
-.main-wrapper .wrapper {
+.main-wrapper .-container {
   display: flex;
   justify-content: center;
+  gap: 50px;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
   width: 100%;
+}
+
+.wrapper.-button {
+  display: flex;
+  gap: 30px;
 }

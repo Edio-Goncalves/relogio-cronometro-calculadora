@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Relógio, cronômetro e calculadora</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;700;800&family=Righteous&family=Work+Sans:wght@100;300;500;800&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/components.css" />
     <link rel="stylesheet" href="/css/main-wrapper.css" />
     <link rel="stylesheet" href="/css/relogio.css" />
     <link rel="stylesheet" href="/css/cronometro.css" />
@@ -18,14 +26,23 @@
   </head>
   <body>
     <main class="main-wrapper">
-      <div class="main-clock wrapper">
-        <h1>Relógio</h1>
+      <div class="main-clock -container">
+        <h1 class="main-tittle">Relógio</h1>
       </div>
-      <div class="main-stopwatch wrapper">
-        <h1>Cronômetro</h1>
+
+      <div class="main-stopwatch -container">
+        <h1 class="main-tittle">Cronômetro</h1>
+        <div class="content">
+          <div data-time id="timer">00:00:00</div>
+          <div class="wrapper -button">
+            <button data-start="start" class="main-button">Start</button>
+            <button data-pause disabled class="main-button">Pause</button>
+            <button data-stop disabled class="main-button">Stop</button>
+          </div>
+        </div>
       </div>
-      <div class="main-calculator wrapper">
-        <h1>Calculadora</h1>
+      <div class="main-calculator -container">
+        <h1 class="main-tittle">Calculadora</h1>
       </div>
     </main>
   </body>

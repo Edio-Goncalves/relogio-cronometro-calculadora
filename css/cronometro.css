@@ -1,3 +1,29 @@
 .main-stopwatch {
   background-color: rgb(127, 255, 140);
 }
+.main-stopwatch .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.main-stopwatch .content #timer {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+  font-size: 4rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: baseline;
+}
+.main-stopwatch .content #timer .separator {
+  margin: 0 5px;
+  color: rgb(87, 87, 87);
+}
+.main-stopwatch .content #timer .milleseconds {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgb(40, 40, 40);
+}
