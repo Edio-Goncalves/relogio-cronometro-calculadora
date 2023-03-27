@@ -15,16 +15,13 @@ const renderTimer = (hr, min, sec) => {
 
   timeEl.innerHTML = hrValue + ":" + minlue + ":" + secValue;
 };
-
 function startTimer(startValue) {
   startBtn.setAttribute("disabled", "true");
   startBtn.innerHTML = "Start";
   pauseBtn.removeAttribute("disabled");
   stopBtn.removeAttribute("disabled");
-
   if (startValue === "start" || startValue === "restart") {
     (hr = 0), (min = 0), (sec = sec != 0 ? -1 : 0);
-
     interval = setInterval(() => {
       sec++;
       while (sec === 60) {
@@ -52,7 +49,6 @@ function startTimer(startValue) {
     }, 1000);
   }
 }
-
 const pauseTimer = () => {
   startBtn.removeAttribute("disabled");
   startBtn.setAttribute("data-start", "continue");
@@ -60,7 +56,6 @@ const pauseTimer = () => {
   pauseBtn.setAttribute("disabled", "true");
   clearInterval(interval);
 };
-
 const stopTime = () => {
   startBtn.removeAttribute("disabled");
   startBtn.setAttribute("data-start", "restart");
@@ -69,16 +64,13 @@ const stopTime = () => {
   startBtn.innerHTML = "Reiniciar";
   clearInterval(interval);
 };
-
 startBtn.addEventListener("click", () => {
   const startValue = startBtn.getAttribute("data-start");
   startTimer(startValue);
 });
-
 pauseBtn.addEventListener("click", () => {
   pauseTimer();
 });
-
 stopBtn.addEventListener("click", () => {
   stopTime();
 });
