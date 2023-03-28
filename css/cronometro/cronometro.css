@@ -1,5 +1,10 @@
 .main-stopwatch {
-  background-color: rgb(127, 255, 140);
+  background: linear-gradient(
+    120deg,
+    rgb(74, 244, 74) 0%,
+    rgb(0, 208, 255) 50%,
+    rgb(123, 188, 77) 100%
+  );
 }
 .main-stopwatch .content {
   display: flex;
@@ -26,4 +31,8 @@
   font-size: 1.5rem;
   font-weight: 300;
   color: rgb(40, 40, 40);
+}
+.wrapper.-button {
+  display: flex;
+  gap: 30px;
 }
