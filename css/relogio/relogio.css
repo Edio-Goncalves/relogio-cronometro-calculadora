@@ -1,5 +1,6 @@
 .main-clock {
   background: linear-gradient(43deg, #4158d0 0%, #c450c0 45%, #ffcc70 100%);
+  min-height: 30vh;
 }
 
 .clock {
@@ -110,4 +111,10 @@
 .clock .hand.hours {
   width: 6px;
   height: 30%;
+}
+
+@media screen and (max-height: 950px) {
+  .main-clock {
+    min-height: 100vh;
+  }
 }
