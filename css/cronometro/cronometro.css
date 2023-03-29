@@ -1,4 +1,12 @@
-.main-stopwatch {
+.Tcontainer {
+  font-family: "Orbitron", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 3rem;
+  height: 100%;
+  width: 100%;
   background: linear-gradient(
     120deg,
     rgb(74, 244, 74) 0%,
@@ -6,33 +14,57 @@
     rgb(123, 188, 77) 100%
   );
 }
-.main-stopwatch .content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px;
+
+.Tcontainer h1 {
+  color: #175cff;
 }
 
-.main-stopwatch .content #timer {
-  font-family: "Orbitron", sans-serif;
-  font-weight: 500;
-  font-size: 4rem;
-  letter-spacing: 1px;
+.Tcontainer .timer {
   display: flex;
-  align-items: baseline;
+  font-size: 55px;
+  font-weight: bold;
+  color: #333;
 }
-.main-stopwatch .content #timer .separator {
-  margin: 0 5px;
-  color: rgb(87, 87, 87);
-}
-.main-stopwatch .content #timer .milleseconds {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: rgb(40, 40, 40);
-}
-.wrapper.-button {
+.Tcontainer .timer .time {
   display: flex;
-  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  color: #172953;
+  min-width: 90px;
+}
+.Tcontainer .timer .separator {
+  padding: 10px;
+  color: #535763;
+}
+.Tcontainer .timer .time#millisecondss {
+  font-size: 30px;
+  color: #525763;
+}
+.Tcontainer .buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.Tcontainer .buttons .btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease-in-out;
+}
+.Tcontainer .buttons .btn:hover {
+  transform: scale(1.1);
+}
+
+.Tcontainer .buttons .btn#startBtn {
+  background-color: #175cff;
+  color: #fff;
+}
+
+#pauseBtn,
+#resumeBtn {
+  display: none;
 }

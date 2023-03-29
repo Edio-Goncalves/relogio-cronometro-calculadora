@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/main-wrapper.css" />
-    <link rel="stylesheet" href="/css/cronometro/components.css" />
+    <link rel="stylesheet" href="/css/components.css" />
     <link rel="stylesheet" href="/css/cronometro/cronometro.css" />
     <link rel="stylesheet" href="/css/relogio/relogio.css" />
     <link rel="stylesheet" href="/css/calculadora/calculadora.css" />
@@ -61,13 +61,20 @@
       </div>
 
       <div class="main-stopwatch -container">
-        <h1 class="main-tittle">Cronômetro</h1>
-        <div class="content">
-          <div data-time id="timer">00:00:00</div>
-          <div class="wrapper -button">
-            <button data-start="start" class="main-button">Start</button>
-            <button data-pause disabled class="main-button">Pause</button>
-            <button data-stop disabled class="main-button">Stop</button>
+        <div class="Tcontainer">
+          <h1 class="main-tittle">Cronômetro</h1>
+          <div class="timer">
+            <div class="time" id="minutess">00</div>
+            <div class="separator">:</div>
+            <div class="time" id="secondss">00</div>
+            <div class="separator">:</div>
+            <div class="time" id="millisecondss">000</div>
+          </div>
+          <div class="buttons">
+            <button class="btn" id="startBtn">Iniciar</button>
+            <button class="btn" id="pauseBtn">Pausar</button>
+            <button class="btn" id="resumeBtn">Continuar</button>
+            <button class="btn" id="resetBtn">Resetar</button>
           </div>
         </div>
       </div>
@@ -77,7 +84,7 @@
 
         <div class="grid-container">
           <div class="output">
-            <div data-previous-operand class="previous-operand"></div>
+            <div data-previous-operand class="previous-operand">0</div>
             <div data-current-operand class="current-operand"></div>
           </div>
           <button data-all-clear class="span-two">AC</button>
